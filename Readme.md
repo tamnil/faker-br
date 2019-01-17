@@ -1,18 +1,32 @@
-# faker-br - Baseado no faker-br para desenvolvimento no Brasil
+# Faker-br - Baseado no faker-br para desenvolvimento no Brasil
+
+* Tamnil Saito Jr. < tamnil@gmail.com >
 
 
-Fork baseado no Faker.js para implementação no Brasil em lingua portuguesa. Este pacote mantem todas as definiçoes de linguagem do Faker.js V 4.xx. o idioma principal foi alterado de en para "pt_BR" , e fallback para "en"
+
+
+Fork baseado no Faker.js para implementação no Brasil em lingua portuguesa. Este pacote mantém todas as definições de linguagem do Faker.js V 4.0.x. o idioma principal foi alterado de en para "pt_BR" , e fallback para "en". Portanto a língua nativa do faker se torna o português.
+    As funçoẽs nativas do faker foram mantidas.
 
 incluindo:
 
-gerador de cpf (todo)
-gerador de cnpj (todo)
-gerador de rg (todo)
-gerador de CEP (todo)
+- gerador de cpf
+- gerador de cnpj
+- gerador de rg (todo)
+- gerador de CEP (todo)
 
 
 ## Uso
 
+    var faker = require('faker-br');
+    
+    console.log(faker.br.cnpj());    
+    let meuCpf = faker.br.cpf();
+    
+    As funçoes básicas são do faker 4.1(https://github.com/Marak/faker.js), e as extensões são as seguintes:
+    
+    
+    
 ### Browser
 
     <script src = "faker-br.js" type = "text/javascript"></script>
@@ -24,7 +38,7 @@ gerador de CEP (todo)
 
 ### Node.js
 
-    var faker-br = require('faker-br');
+    var faker = require('faker-br');
 
     var randomName = faker.name.findName(); // Rowan Nikolaus
     var randomEmail = faker.internet.email(); // Kassandra.Haley@erich.biz
@@ -33,18 +47,6 @@ gerador de CEP (todo)
 ## API
 
 
-### Faker.fake()
-
-faker-br contains a super useful generator method `Faker.fake` for combining faker-br API methods using a mustache string format.
-
-**Example:**
-
-``` js
-console.log(faker.fake("{{name.lastName}}, {{name.firstName}} {{name.suffix}}"));
-// outputs: "Marks, Dean Sr."
-```
-
-This will interpolate the format string with the value of methods `name.lastName()`, `name.firstName()`, and `name.suffix()`
 ## Implementações para pt_BR
 
 name.gender
@@ -61,7 +63,11 @@ name.title (new)
 
 
 ### API Methods
-
+#### faker-br
+* br
+  * cpf
+  * cnpj
+  
 * address
   * zipCode
   * city
@@ -292,23 +298,18 @@ npm run-script build
 npm run-script doc
 ```
 
-## Version Release Schedule
-
-faker-br is a popular project used by many organizations and individuals in production settings. Major and Minor version releases are generally on a monthly schedule. Bugs fixes are addressed by severity and fixed as soon as possible.
-
-If you require the absolute latest version of `faker-br` the `master` branch @ http://github.com/marak/faker-br/ should always be up to date and working.
 
 ## Maintainer
 
-#### Marak Squires
+#### Tamnil Saito Junior <tamnil@gmail.com>
 
-faker-br - Copyright (c) 2018
+Faker-br - Copyright (c) 2018
 Tamnil Saito Junior 
 
 http://github.com/tamnil/faker-br/
 
-faker-br was forked by and has used data definitions from:
- * http://github.com/marak/faker-br/
+Faker-br was forked by and has used data definitions from:
+ * http://github.com/marak/faker.js/
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
