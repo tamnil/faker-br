@@ -8,6 +8,7 @@ incluindo:
 gerador de cpf (todo)
 gerador de cnpj (todo)
 gerador de rg (todo)
+gerador de CEP (todo)
 
 
 ## Uso
@@ -248,7 +249,18 @@ If you want consistent results, you can set your own seed:
 
 ```js
 faker.seed(123);
+us of version `v2.0.0` faker-br has support for multiple localities.
 
+The default language locale is set to English.
+
+Setting a new locale is simple:
+
+```js
+// sets locale to de
+faker.setLocale("de");
+// or
+faker.locale = "de";
+```
 var firstRandom = faker.random.number();
 
 // Setting the seed again resets the sequence.
