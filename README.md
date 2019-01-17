@@ -1,75 +1,70 @@
-# Faker-br - Baseado no faker-br para desenvolvimento no Brasil
+# faker.js - generate massive amounts of fake data in the browser and node.js
 
-* Tamnil Saito Jr. < tamnil@gmail.com >
+![Faker.js](http://imgur.com/KiinQ.png)
 
+[![Build Status](https://travis-ci.org/Marak/faker.js.svg?branch=master)](https://travis-ci.org/Marak/faker.js)
 
+[![npm version](https://badge.fury.io/js/faker.svg)](http://badge.fury.io/js/faker)
 
+## Demo
 
-Fork baseado no Faker.js para implementação no Brasil em lingua portuguesa. Este pacote mantém todas as definições de linguagem do Faker.js V 4.0.x. o idioma principal foi alterado de en para "pt_BR" , e fallback para "en". Portanto a língua nativa do faker se torna o português.
-    As funçoẽs nativas do faker foram mantidas.
+[https://cdn.rawgit.com/Marak/faker.js/master/examples/browser/index.html](https://cdn.rawgit.com/Marak/faker.js/master/examples/browser/index.html)
 
-incluindo:
+## Hosted API Microservice
 
-- gerador de cpf
-- gerador de cnpj
-- gerador de rg (todo)
-- gerador de CEP (todo)
+[http://faker.hook.io](http://faker.hook.io/)
+ - Supports all Faker API Methods
+ - Full-Featured Microservice
+ - Hosted by [hook.io](http://hook.io)
 
+```bash
+curl http://faker.hook.io?property=name.findName&locale=de
+```
 
-## Uso
+## Usage
 
-    var faker = require('faker-br');
-    
-    console.log(faker.br.cnpj());    
-    let meuCpf = faker.br.cpf();
-    
-    As funçoes básicas são do faker 4.1(https://github.com/Marak/faker.js), e as extensões são as seguintes:
-    
-    
-    
 ### Browser
-
-    <script src = "faker-br.js" type = "text/javascript"></script>
+```html
+    <script src = "faker.js" type = "text/javascript"></script>
     <script>
       var randomName = faker.name.findName(); // Caitlyn Kerluke
       var randomEmail = faker.internet.email(); // Rusty@arne.info
       var randomCard = faker.helpers.createCard(); // random contact card containing many properties
     </script>
-
+```
 ### Node.js
-
-    var faker = require('faker-br');
+```js
+    var faker = require('faker');
 
     var randomName = faker.name.findName(); // Rowan Nikolaus
     var randomEmail = faker.internet.email(); // Kassandra.Haley@erich.biz
     var randomCard = faker.helpers.createCard(); // random contact card containing many properties
-
+```
 ## API
 
 
-## Implementações para pt_BR
+### Faker.fake()
 
-name.gender
-name.firstname (extended)
-name.male_first_name (new)
-name.female_first_name (new)
-name.name (new)
-name.gender (new)
-name.prefix (new)
-name.title (new)
+faker.js contains a super useful generator method `Faker.fake` for combining faker API methods using a mustache string format.
 
+**Example:**
 
+``` js
+console.log(faker.fake("{{name.lastName}}, {{name.firstName}} {{name.suffix}}"));
+// outputs: "Marks, Dean Sr."
+```
 
+This will interpolate the format string with the value of methods `name.lastName()`, `name.firstName()`, and `name.suffix()`
 
+### JSDoc API Browser
+
+[http://marak.github.io/faker.js/](http://marak.github.io/faker.js/)
 
 ### API Methods
-#### faker-br
-* br
-  * cpf
-  * cnpj
-  
+
 * address
   * zipCode
+  * zipCodeByState
   * city
   * cityPrefix
   * citySuffix
@@ -85,6 +80,13 @@ name.title (new)
   * stateAbbr
   * latitude
   * longitude
+  * direction
+  * cardinalDirection
+  * ordinalDirection
+  * nearbyGPSCoordinate
+* br
+  * cpf
+  * cnpj
 * commerce
   * color
   * department
@@ -122,6 +124,7 @@ name.title (new)
 * finance
   * account
   * accountName
+  * routingNumber
   * mask
   * amount
   * transactionType
@@ -129,9 +132,17 @@ name.title (new)
   * currencyName
   * currencySymbol
   * bitcoinAddress
+  * creditCardNumber
+  * creditCardCVV
   * ethereumAddress
   * iban
   * bic
+* git
+  * branch
+  * commitEntry
+  * commitMessage
+  * commitSha
+  * shortSha
 * hacker
   * abbreviation
   * adjective
@@ -144,6 +155,9 @@ name.title (new)
   * slugify
   * replaceSymbolWithNumber
   * replaceSymbols
+  * replaceCreditCardSymbols
+  * repeatString
+  * regexpStyleStringParse
   * shuffle
   * mustache
   * createCard
@@ -168,6 +182,8 @@ name.title (new)
   * technics
   * transport
   * dataUri
+  * lorempixel
+  * unsplash
 * internet
   * avatar
   * email
@@ -199,6 +215,7 @@ name.title (new)
   * lastName
   * findName
   * jobTitle
+  * gender
   * prefix
   * suffix
   * title
@@ -213,6 +230,7 @@ name.title (new)
   * number
   * float
   * arrayElement
+  * arrayElements
   * objectElement
   * uuid
   * boolean
@@ -220,6 +238,7 @@ name.title (new)
   * words
   * image
   * locale
+  * alpha
   * alphaNumeric
   * hexaDecimal
 * system
@@ -233,20 +252,86 @@ name.title (new)
   * directoryPath
   * filePath
   * semver
+* unique
+* vehicle
+  * vehicle
+  * manufacturer
+  * model
+  * type
+  * fuel
+  * vin
+  * color
 
 
 ## Localization
 
+As of version `v2.0.0` faker.js has support for multiple localities.
+
+The default language locale is set to English.
+
+Setting a new locale is simple:
+
+```js
+// sets locale to de
+faker.locale = "de";
+```
+
+ * az
+ * ar
+ * cz
+ * de
+ * de_AT
+ * de_CH
+ * en
+ * en_AU
+ * en_BORK
+ * en_CA
+ * en_GB
+ * en_IE
+ * en_IND
+ * en_US
+ * en_ZA
+ * en_au_ocker
+ * es
+ * es_MX
+ * fa
+ * fr
+ * fr_CA
+ * fr_CH
+ * ge
+ * id_ID
+ * it
+ * ja
+ * ko
+ * nb_NO
+ * nep
+ * nl_BE
+ * nl
+ * pl
+ * pt_BR
+ * pt_PT
+ * ro
+ * ru
+ * sk
+ * sv
+ * tr
+ * uk
+ * vi
+ * zh_CN
+ * zh_TW
 
 
 ### Individual Localization Packages
 
+As of vesion `v3.0.0` faker.js supports incremental loading of locales. 
+
 By default, requiring `faker` will include *all* locale data.
+
 In a production environment, you may only want to include the locale data for a specific set of locales.
 
 ```js
 // loads only de locale
-var faker-br = require('faker/locale/de');
+var faker = require('faker/locale/de');
 ```
 
 ## Setting a randomness seed
@@ -255,18 +340,7 @@ If you want consistent results, you can set your own seed:
 
 ```js
 faker.seed(123);
-us of version `v2.0.0` faker-br has support for multiple localities.
 
-The default language locale is set to English.
-
-Setting a new locale is simple:
-
-```js
-// sets locale to de
-faker.setLocale("de");
-// or
-faker.locale = "de";
-```
 var firstRandom = faker.random.number();
 
 // Setting the seed again resets the sequence.
@@ -284,9 +358,44 @@ console.log(firstRandom === secondRandom);
 
 You can view a code coverage report generated in coverage/lcov-report/index.html.
 
-## Building faker-br
+## Projects Built with faker.js
 
-faker-br uses [gulp](http://gulpjs.com/) to automate it's build process. Running the following build command will generate new browser builds, documentation, and code examples for the project.
+### Fake JSON Schema
+
+Use faker generators to populate JSON Schema samples.
+See: https://github.com/pateketrueke/json-schema-faker/
+
+### CLI
+
+Run faker generators from Command Line.
+See: https://github.com/lestoni/faker-cli
+
+### Mocker data generator
+
+Minimal JSON data generator, fakerJs is one of the providers.
+See:  https://github.com/danibram/mocker-data-generator
+
+**Want to see your project added here? Let us know!**
+
+### Meteor
+
+#### Meteor Installation
+
+```
+meteor add practicalmeteor:faker
+```
+
+#### Meteor Usage, both client and server
+
+```js
+var randomName = faker.name.findName(); // Rowan Nikolaus
+var randomEmail = faker.internet.email(); // Kassandra.Haley@erich.biz
+var randomCard = faker.helpers.createCard(); // random contact card containing many properties
+```
+
+## Building faker.js
+
+faker uses [gulp](http://gulpjs.com/) to automate it's build process. Running the following build command will generate new browser builds, documentation, and code examples for the project.
 
 ```
 npm run-script build
@@ -298,18 +407,24 @@ npm run-script build
 npm run-script doc
 ```
 
+## Version Release Schedule
+
+faker.js is a popular project used by many organizations and individuals in production settings. Major and Minor version releases are generally on a monthly schedule. Bugs fixes are addressed by severity and fixed as soon as possible.
+
+If you require the absolute latest version of `faker.js` the `master` branch @ http://github.com/marak/faker.js/ should always be up to date and working.
 
 ## Maintainer
 
-#### Tamnil Saito Junior <tamnil@gmail.com>
+#### Marak Squires
 
-Faker-br - Copyright (c) 2018
-Tamnil Saito Junior 
+faker.js - Copyright (c) 2017
+Marak Squires
+http://github.com/marak/faker.js/
 
-http://github.com/tamnil/faker-br/
+faker.js was inspired by and has used data definitions from:
 
-Faker-br was forked by and has used data definitions from:
- * http://github.com/marak/faker.js/
+ * https://github.com/stympy/faker/ - Copyright (c) 2007-2010 Benjamin Curtis
+ * http://search.cpan.org/~jasonk/Data-Faker-0.07/ - Copyright 2004-2005 by Jason Kohles
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -329,28 +444,5 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
------------------------------------
-
-Permissão é concedida, gratuitamente, a qualquer pessoa que obtiver
-uma cópia deste software e dos arquivos de documentação associados
-"Software"), para lidar com o Software sem restrições, incluindo
-sem limitação os direitos de usar, copiar, modificar, mesclar, publicar,
-distribuir, sublicenciar e / ou vender cópias do Software, e para
-permitir que pessoas a quem o Software é fornecido façam isso, sujeitas a
-as seguintes condições:
-
-O aviso de copyright acima e este aviso de permissão devem ser
-incluído em todas as cópias ou partes substanciais do Software.
-
-O SOFTWARE É FORNECIDO "COMO ESTÁ", SEM GARANTIA DE QUALQUER TIPO,
-EXPRESSA OU IMPLÍCITA, INCLUINDO, MAS NÃO SE LIMITANDO ÀS GARANTIAS
-COMERCIABILIDADE, ADEQUAÇÃO A UM FIM ESPECÍFICO E
-NÃO INFRAÇÃO. EM NENHUM CASO, OS AUTORES OU OS TITULARES DOS DIREITOS DE AUTOR
-RESPONSÁVEL POR QUALQUER REIVINDICAÇÃO, DANOS OU OUTRAS RESPONSABILIDADES, QUER EM AÇÃO
-CONTRATO, DELITO OU DE OUTRA FORMA, DECORRENTE DE, FORA OU EM CONEXÃO
-COM O SOFTWARE OU O USO OU OUTRAS OFERTAS NO SOFTWARE.
-
-
 
 

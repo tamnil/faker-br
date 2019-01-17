@@ -9,7 +9,9 @@ var functionHelpers = {};
 module.exports = functionHelpers;
 
 
-var IGNORED_MODULES = ['locales', 'locale', 'localeFallback', 'definitions', 'fake', 'helpers'];
+// ignoring faker.br for es6 propouses (arrow functions, etc...
+
+var IGNORED_MODULES = ['br','locales', 'locale', 'localeFallback', 'definitions', 'fake', 'helpers'];
 var IGNORED_METHODS = {
     system: ['directoryPath', 'filePath'] // these are TODOs
 };
