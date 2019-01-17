@@ -169,4 +169,4 @@ gulp.task('nodeLocalRequires', function (cb){
 });
 
 
-gulp.task('default', tasks);
+gulp.task('default', gulp.series(tasks));
