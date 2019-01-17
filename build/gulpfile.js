@@ -15,9 +15,10 @@
 
 var gulp = require('gulp');
 var jsdoc = require('gulp-jsdoc3');
-var uglify = require('gulp-uglify');
+// var uglify = require('gulp-uglify');
+
+let uglify = require('gulp-uglify-es').default;
 var rename = require('gulp-rename');
-var ghPages = require('gulp-gh-pages');
 var mustache = require('gulp-mustache');
 var browserify = require('browserify');
 var transform = require('vinyl-transform');
@@ -58,11 +59,6 @@ gulp.task('browser-package', function() {
     .pipe(rename('../examples/browser/js/faker.min.js'));
 });
 
-// pushes jsdoc changes to gh-pages branch
-gulp.task('gh-pages', function(cb) {
-  return gulp.src('../doc/**/*')
-     .pipe(ghPages());
-});
 
 gulp.task('jsdoc', function (cb) {
     var config = require('../conf.json');
@@ -117,7 +113,7 @@ gulp.task('documentation', function(cb) {
 
 });
 
-var tasks = ['documentation', 'jsdoc', 'nodeLocalRequires', 'browser-package', 'gh-pages'];
+var tasks = ['documentation', 'jsdoc', 'nodeLocalRequires', 'browser-package'];
 
 var locales = require('../lib/locales');
 var localTasks = Object.keys(locales);
