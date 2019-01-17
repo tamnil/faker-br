@@ -1,7 +1,7 @@
 {
   "name": "faker-br",
   "description": "Brazilian Faker Data Generator - Gerador de dados para o Brasil Fork do faker para pt_BR com extensão para CNPJ, CPF, RG, etc.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "contributors": [
     "Tamnil Saito Junior <tamnil@gmail.com>"
   ],
