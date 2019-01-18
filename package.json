@@ -58,6 +58,7 @@
     },
     "devDependencies": {
         "browserify": "^7.1.0",
+        "chai": "^4.2.0",
         "coveralls": "^3.0.2",
         "gulp": "^4.0.0",
         "gulp-jsdoc3": "^0.2.1",
