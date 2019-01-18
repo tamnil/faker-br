@@ -2,7 +2,7 @@
 
 * Tamnil Saito Jr. < tamnil@gmail.com >
 
-
+## versao 0,1,x - BETA (versão de desenvolvimento inicial)
 
 
 Fork baseado no Faker.js para implementação no Brasil em lingua portuguesa. Este pacote mantém todas as definições de linguagem do Faker.js V 4.0.x. o idioma principal foi alterado de en para "pt_BR" , e fallback para "en". Portanto a língua nativa do faker se torna o português.
@@ -15,6 +15,9 @@ incluisão da seguintes funções:
 - gerador de RG (todo)
 - gerador de CEP (todo)
 - gerador de profissões (todo)
+- gerador de cartão de crédito válido
+    A geração de cartao de credito no faker.js, gera numeros não validados. O feker-br usa geração de numeros válidos por "Luhn algorithm -Mod 10"
+
 
 A medida do possível, este modulo respeita a estrutura do faker.js (4.0.x) permitindo a substituição direta:
 
@@ -69,6 +72,7 @@ As funçoes básicas são do faker 4.1 (https://github.com/Marak/faker.js).
 		retorna valor formatado
 
 ### name 
+
 - adição de mais nomes para pt-br o que aumenta o numero de combinações, reduzindo repetiçoes.
 - adição de campos nao traduzidos para pt_BR marcados como "new", originalmente existentes em inglês.
 
