@@ -5,27 +5,28 @@ const expect = require('chai').expect
 const faker = require('../../index.js')
 
 
-describe('hello world',() => {
+//helper functions:
+const testSize = 1000;
+const counter = x => Array(x).fill(undefined);
+const batchTest = x => counter(100).map(x);
 
 
+// warzone for development
+describe('warzone',() => {
     it('Should return ',()=>{
 
-
-        let test = [];
-        for(let i =1 ; i <10; i++){
-            // console.log(faker.br.cpf())
-            console.log(faker.br.cnpj({mask:false}))
-            // test.push(faker.br.cnpj())
-
-            expect(faker.br.cpf().length).to.be.equal(11)
-            expect(faker.br.cpf()).to.be.an('string')
-            console.log(faker.br.cpf({format:true}) )
-            console.log(faker.br.cnpj({format:true}) )
-
-        }
-
-        console.log(test)
-        assert(true)
     })
 
 })
+
+describe('test cpf',() => {
+    it('Should test cpf unmasked type and size ',()=>{
+        batchTest(() => {
+            let cpf = faker.br.cpf()
+            expect(cpf.length).to.be.equal(11,'cpf length is not equal 11')
+            expect(cpf).to.be.an('string', 'cpf is not string')
+        });
+    })
+
+})
+
