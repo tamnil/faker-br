@@ -16,8 +16,15 @@ incluisão da seguintes funções:
 - gerador de CEP (todo)
 - gerador de profissões (todo)
 
+A medida do possível, este modulo respeita a estrutura do faker.js (4.0.x) permitindo a substituição direta:
 
-O faker.js é conhecido por produzir dados em massa.
+    // original
+    // const faker = require('faker');
+
+    // usando faker-br
+    const faker = require('faker-br');
+
+
 
 ## Uso
 
@@ -36,8 +43,8 @@ As funçoes básicas são do faker 4.1 (https://github.com/Marak/faker.js).
 
 ### Aplicação
 
-    var randomcpf = faker.br.cpf(); // Rowan Nikolaus
-    var randomCnpj = faker.br.cnpj(); // Kassandra.Haley@erich.biz
+    var randomcpf = faker.br.cpf();
+    var randomCnpj = faker.br.cnpj();
 
     console.log(faker.br.cnpj()) ;    
 
@@ -46,29 +53,30 @@ As funçoes básicas são do faker 4.1 (https://github.com/Marak/faker.js).
 
 ## Implementações para pt_BR
 
-### API exclusiva paraa pt_BR
+### API exclusiva para pt_BR
 
-#### namespace: faker-br.br
+#### namespace: .br
+    Namespace exclusivo para campos brasileiros.
 
-.br.cpf(opts)
-	opts(opcional)
-		fotmat:boolean
+* .br.cpf(<opts>)
+    - opts(Object opcional)
+        - format:boolean
 		retorna valor formatado
 
-.br.cnpj(opts)
-	opts(opcional)
-		fotmat:boolean
+* .br.cnpj(<opts>)
+    - opts(Object opcional)
+	- format:boolean
 		retorna valor formatado
 
 ### name 
-- adição de mais nomes para pt-br o que reduz o aumenta o numero de combinações, reduzindo repetiçoes.
+- adição de mais nomes para pt-br o que aumenta o numero de combinações, reduzindo repetiçoes.
 - adição de campos nao traduzidos para pt_BR marcados como "new", originalmente existentes em inglês.
 
 name.gender
-name.firstname (extended) (extended: 2756 items )
-name.male_first_name (new) (extended: 2043 items )
-name.female_first_name (new) (extended: 713 items )
-name.name (new)
+name.firstname (extended) (extended: 2756 items, original:91 )
+name.male_first_name (new) (extended: 2043 items, original:0 )
+name.female_first_name (new) (extended: 713 items,original:0 )
+name.name (direct imnport)
 name.gender (new)
 name.prefix (new)
 name.title (translated)
