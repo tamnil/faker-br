@@ -17,12 +17,11 @@ incluisão da seguintes funções:
 - gerador de profissões (todo)
 
 
+O faker.js é conhecido por produzir dados em massa.
 
 ## Uso
 
     var faker = require('faker-br');
-    
-    console.log(faker.br.cnpj());    
     let meuCpf = faker.br.cpf();
     
 As funçoes básicas são do faker 4.1 (https://github.com/Marak/faker.js).  
@@ -30,11 +29,6 @@ As funçoes básicas são do faker 4.1 (https://github.com/Marak/faker.js).
 ### Browser
 
     <script src = "faker-br.js" type = "text/javascript"></script>
-    <script>
-      var randomName = faker.name.findName(); // Caitlyn Kerluke
-      var randomEmail = faker.internet.email(); // Rusty@arne.info
-      var randomCard = faker.helpers.createCard(); // random contact card containing many properties
-    </script>
 
 ### Node.js
 
@@ -42,25 +36,49 @@ As funçoes básicas são do faker 4.1 (https://github.com/Marak/faker.js).
 
 ### Aplicação
 
-    var randomName = faker.br.cpf(); // Rowan Nikolaus
-    var randomEmail = faker.br.cnpj(); // Kassandra.Haley@erich.biz
+    var randomcpf = faker.br.cpf(); // Rowan Nikolaus
+    var randomCnpj = faker.br.cnpj(); // Kassandra.Haley@erich.biz
+
+    console.log(faker.br.cnpj()) ;    
 
 ## API
 
 
 ## Implementações para pt_BR
 
+### API exclusiva paraa pt_BR
+
+#### namespace: faker-br.br
+
+.br.cpf(opts)
+	opts(opcional)
+		fotmat:boolean
+		retorna valor formatado
+
+.br.cnpj(opts)
+	opts(opcional)
+		fotmat:boolean
+		retorna valor formatado
+
+### name 
+- adição de mais nomes para pt-br o que reduz o aumenta o numero de combinações, reduzindo repetiçoes.
+- adição de campos nao traduzidos para pt_BR marcados como "new", originalmente existentes em inglês.
+
 name.gender
-name.firstname (extended)
-name.male_first_name (new)
-name.female_first_name (new)
+name.firstname (extended) (extended: 2756 items )
+name.male_first_name (new) (extended: 2043 items )
+name.female_first_name (new) (extended: 713 items )
 name.name (new)
 name.gender (new)
 name.prefix (new)
-name.title (new)
+name.title (translated)
 
 
 
+
+## modulos traduzidos
+commerce: color,department.product name
+name: gender prefix
 
 
 ### API Methods
