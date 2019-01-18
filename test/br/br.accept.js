@@ -8,13 +8,17 @@ const faker = require('../../index.js')
 //helper functions:
 const testSize = 1000;
 const counter = x => Array(x).fill(undefined);
-const batchTest = x => counter(100).map(x);
+const batchTest = x => counter(testSize).map(x);
 
 
 // warzone for development
 describe('warzone',() => {
-    it('Should return ',()=>{
+    describe('Should return ',()=>{
 
+        it('asdf',()=>{
+                console.log(faker.br.credit_card())
+            console.log(faker.commerce.product())
+        })
     })
 
 })
@@ -26,6 +30,8 @@ describe('test cpf',() => {
             expect(cpf.length).to.be.equal(11,'cpf length is not equal 11')
             expect(cpf).to.be.an('string', 'cpf is not string')
         });
+
+
     })
 
 })
