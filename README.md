@@ -2,7 +2,7 @@
 
 * Tamnil Saito Jr. < tamnil@gmail.com >
 
-## versao 0,1,x - BETA (versão de desenvolvimento inicial)
+## versao 0.1.x - BETA (versão de desenvolvimento inicial)
 
 
 Fork baseado no Faker.js para implementação no Brasil em lingua portuguesa. Este pacote mantém todas as definições de linguagem do Faker.js V 4.0.x. o idioma principal foi alterado de en para "pt_BR" , e fallback para "en". Portanto a língua nativa do faker se torna o português.
@@ -19,7 +19,7 @@ incluisão da seguintes funções:
     A geração de cartao de credito no faker.js, gera numeros não validados. O feker-br usa geração de numeros válidos por "Luhn algorithm -Mod 10"
 
 
-A medida do possível, este modulo respeita a estrutura do faker.js (4.0.x) permitindo a substituição direta:
+A medida do possível, este módulo respeita a estrutura do faker.js (4.0.x) permitindo a substituição direta:
 
     // original
     // const faker = require('faker');
