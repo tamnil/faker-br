@@ -13,12 +13,25 @@ const batchTest = x => counter(testSize).map(x);
 
 // warzone for development
 describe('warzone',() => {
-    describe('Should return ',()=>{
+    describe('welcome to main warzone',()=>{
 
-        it('asdf',()=>{
-                console.log(faker.br.credit_card())
+        it('tests area',()=>{
+            console.log(faker.br.credit_card('VISA'))
             console.log(faker.commerce.product())
+
+
+
+
+            console.log(
+    Object.getOwnPropertyNames(faker.br.credit_card),
+                faker.br.credit_card.a
+            )
+
+
+
         })
+
+
     })
 
 })
@@ -30,9 +43,25 @@ describe('test cpf',() => {
             expect(cpf.length).to.be.equal(11,'cpf length is not equal 11')
             expect(cpf).to.be.an('string', 'cpf is not string')
         });
+    })
+
+})
+
+describe('Test Credit Card BR', () => {
+
+    it('',() => {
+
+
 
 
     })
 
+})
+
+describe('', () => {
+    describe('', () => {
+        it('',() => {
+        })
+    })
 })
 

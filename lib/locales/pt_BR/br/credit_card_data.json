@@ -1,0 +1,78 @@
+{ 
+    "card_data" : { 
+        "visa": {
+            "prefix":[
+                "4539",
+                "4556",
+                "4916",
+                "4532",
+                "4929",
+                "40240071",
+                "4485",
+                "4716",
+                "4i"
+            ],
+            "digitCount":16
+        },
+
+        "mastercard"  : {
+            "prefix" : [ 
+                "51",
+                "52",
+                "53",
+                "54",
+                "55"
+            ],
+            "digitCount":16
+
+        },
+
+        "amex": {
+            "prefix":
+            [
+                "34",
+                "37"
+            ],
+            "digitCount": 15
+        },
+
+        "discover":{
+            "prefix" : ["6011"],
+            "digitCount": 16
+        },
+        "diners":{
+            "prefix":[
+                "300",
+                "301",
+                "302",
+                "303",
+                "36",
+                "38"
+            ],
+            "digitCount":16
+        },
+
+        "enRoute":{
+            "prefix":[
+                "2014",
+                "2149"
+            ],
+            "digitCount":16
+        },
+        "jcb":{
+            "prefix":[
+                "35"
+            ],
+
+            "digitCount":16
+
+        },
+
+        "voyager":{
+            "prefix":["8699"],
+            "digitCount":16
+
+        }
+    }
+
+}
