@@ -24,7 +24,7 @@ describe('warzone',() => {
 
 
             console.log(
-    Object.getOwnPropertyNames(faker.br.credit_card),
+                Object.getOwnPropertyNames(faker.br.credit_card),
                 faker.br.credit_card.a
             )
 
@@ -60,26 +60,6 @@ describe('Test Credit Card BR', () => {
 
     })
 
-})
-
-describe('test RG  ', () => {
-    const rg = require('../../lib/locales/pt_BR/br/document/rg.js')
-
-
-    describe('unit test Rg', () => {
-        it('is istring',() => {
-            assert(rg().length === 9 , 'rg is equal  9' )
-            assert(typeof rg()  === 'string', 'rg equal string')
-        })
-    })
-
-    describe('rg functional test',() => {
-
-let  br = faker.br
-        assert(typeof br.rg === 'function',' is function')
-        assert(typeof br.rg() === 'string', 'is string' )
-        assert( br.rg().length === 9 , 'is length 9' )
-    })
 })
 
 
