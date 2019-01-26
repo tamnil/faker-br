@@ -8,6 +8,17 @@
 Fork baseado no Faker.js para implementação no Brasil em lingua portuguesa. Este pacote mantém todas as definições de linguagem do Faker.js V 4.0.x. o idioma principal foi alterado de en para "pt_BR" , e fallback para "en". Portanto a língua nativa do faker se torna o português.
     As funçoẽs nativas do faker foram mantidas.
 
+
+Fakerbr CLI 
+para aplicaçoes em linha de comando:
+
+- sh/bash:
+
+    $ echo meu cpf é `faker-br br.cpf`
+    meu cpf é 65444122529
+
+
+
 incluisão da seguintes funções:
 
 - gerador de cpf
