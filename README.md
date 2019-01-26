@@ -13,10 +13,10 @@ Fakerbr CLI
 para aplicaçoes em linha de comando:
 
 - sh/bash:
-
+```js
     $ echo meu cpf é `faker-br br.cpf`
     meu cpf é 65444122529
-
+```
 
 
 incluisão da seguintes funções:
