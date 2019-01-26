@@ -5,7 +5,7 @@
 ## versao 0.1.x - BETA (versão de desenvolvimento inicial)
 
 
-Fork baseado no Faker.js para implementação no Brasil em lingua portuguesa. Este pacote mantém todas as definições de linguagem do Faker.js V 4.0.x. o idioma principal foi alterado de en para "pt_BR" , e fallback para "en". Portanto a língua nativa do faker se torna o português.
+Fork baseado no Faker.js para implementação no Brasil em língua portuguesa. Este pacote mantém todas as definições de linguagem do Faker.js V 4.0.x. o idioma principal foi alterado de en para "pt_BR" , e fallback para "en". Portanto a língua nativa do faker-br se torna o português, com fallback para ingles que possui implementaçoes não disponiveis nas outras linguagens
     As funçoẽs nativas do faker foram mantidas.
 
 
@@ -21,13 +21,16 @@ para aplicaçoes em linha de comando:
 
 incluisão da seguintes funções:
 
-- gerador de cpf
-- gerador de cnpj
-- gerador de RG (todo)
-- gerador de CEP (todo)
-- gerador de profissões (todo)
+- gerador de CPF
+- gerador de CNPJ
 - gerador de cartão de crédito válido
-    A geração de cartao de credito no faker.js, gera numeros não validados. O feker-br usa geração de numeros válidos por "Luhn algorithm -Mod 10"
+- Aumento nos nomes em português, reduzindo probabilidade de colisão de nomes-sobrenomes, resultantes combinação
+- A fazer:
+   - gerador de RG (todo) 
+   - gerador de CEP (todo)
+   - gerador de profissões (todo)
+
+    A geração de cartao de credito no faker.js, gera numeros não validados. O faker-br usa geração de numeros válidos por "Luhn algorithm -Mod 10"
 
 
 A medida do possível, este módulo respeita a estrutura do faker.js (4.0.x) permitindo a substituição direta:
