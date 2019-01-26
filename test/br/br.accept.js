@@ -5,6 +5,7 @@ const expect = require('chai').expect
 const faker = require('../../index.js')
 
 
+
 //helper functions:
 const testSize = 1000;
 const counter = x => Array(x).fill(undefined);
@@ -36,7 +37,10 @@ describe('warzone',() => {
 
 })
 
-describe('test cpf',() => {
+describe('test cpf unit tests',() => {
+
+
+
     it('Should test cpf unmasked type and size ',()=>{
         batchTest(() => {
             let cpf = faker.br.cpf()
@@ -56,6 +60,34 @@ describe('Test Credit Card BR', () => {
 
     })
 
+})
+
+describe('test RG  ', () => {
+    const rg = require('../../lib/locales/pt_BR/br/document/rg.js')
+
+
+    describe('unit test Rg', () => {
+        it('is istring',() => {
+            assert(rg().length === 9 , 'rg is equal  9' )
+            assert(typeof rg()  === 'string', 'rg equal string')
+        })
+    })
+
+    describe('rg functional test',() => {
+
+let  br = faker.br
+        assert(typeof br.rg === 'function',' is function')
+        assert(typeof br.rg() === 'string', 'is string' )
+        assert( br.rg().length === 9 , 'is length 9' )
+    })
+})
+
+
+describe('', () => {
+    describe('', () => {
+        it('',() => {
+        })
+    })
 })
 
 describe('', () => {
