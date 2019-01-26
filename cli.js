@@ -6,29 +6,37 @@
 *
 */
 
+'use strict'
+
+const _ = require('lodash')
+
+// console.log(_)
+
 const faker = require('./')
 
 const argv = process.argv
 
-const stripFirstTwo = (el , idx) =>  idx > 1 
+const isFunction =  data => typeof data  === 'function';
 
-const args = argv.filter(stripFirstTwo)
+const removeFirstTwo = ([x,y,...z]) =>  z 
 
-const mainArg = args[0];
+const args = removeFirstTwo(argv) 
 
-const log = console.log
+const first = ([x,...y]) => x
 
-const fakerCategoriesPath = mainArg ? mainArg.split('.') : ['cli-help'];
+const mainArg = first(args);
 
-const isFirstElement = (idx) => idx === 0;
+const fakerCategoriesPath =  mainArg.split('.') || ['cli-help'];
 
-const fakerMainCategory = faker[fakerCategoriesPath[0]]
+const isZero = (num) => num === 0;
 
-const generateFakerFunction = (acc,el,idx) => isFirstElement(idx ) ?  acc : acc[el]
+const fakerMainCategory = faker[first(fakerCategoriesPath)]
+
+const generateFakerFunction = (acc,el,idx) => isZero(idx ) ?  acc : acc[el]
 
 const evaluatedFaker = fakerCategoriesPath.reduce( generateFakerFunction ,fakerMainCategory)
 
-const response = evaluatedFaker ? evaluatedFaker() : 'undefined Faker-br function';
+const response = evaluatedFaker ? evaluatedFaker : 'undefined Faker-br function';
 
 console.log(response)
 
