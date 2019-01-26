@@ -1,6 +1,6 @@
 {
-    "name": "fakerbr",
-    "description": "Brazilian Faker Data Generator - Gerador de dados para o Brasil Fork do faker para pt_BR com extensão para CNPJ, CPF, RG, etc.",
+    "name": "faker-br",
+    "description": "Brazilian Faker Data Generator - Gerador de dados para o Brasil. Fork do faker para pt_BR com extensão para CNPJ, CPF, RG, etc. ",
     "version": "0.1.8",
     "contributors": [
         "Tamnil Saito Junior <tamnil@gmail.com>"
@@ -78,7 +78,7 @@
         "vinyl-transform": "1.0.0"
     },
     "bin": {
-        "fakerbr": "cli.js"
+        "faker-br": "cli.js"
     },
     "license": "MIT",
     "main": "index.js",
