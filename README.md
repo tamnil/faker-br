@@ -2,14 +2,12 @@
 
 * Tamnil Saito Jr. < tamnil@gmail.com >
 
-## versao 0.1.x - BETA (versão de desenvolvimento inicial)
-
 
 Fork baseado no Faker.js para implementação no Brasil em língua portuguesa. Este pacote mantém todas as definições de linguagem do Faker.js V 4.0.x. o idioma principal foi alterado de en para "pt_BR" , e fallback para "en". Portanto a língua nativa do faker-br se torna o português, com fallback para ingles que possui implementaçoes não disponiveis nas outras linguagens
     As funçoẽs nativas do faker foram mantidas.
 
 
-Fakerbr CLI 
+Fakerbr CLI
 para aplicaçoes em linha de comando:
 
 - sh/bash:
@@ -26,7 +24,7 @@ incluisão da seguintes funções:
 - gerador de cartão de crédito válido
 - Aumento nos nomes em português, reduzindo probabilidade de colisão de nomes-sobrenomes, resultantes combinação
 - A fazer:
-   - gerador de RG (todo) 
+   - gerador de RG (todo)
    - gerador de CEP (todo)
    - gerador de profissões (todo)
 
@@ -47,9 +45,9 @@ A medida do possível, este módulo respeita a estrutura do faker.js (4.0.x) per
 
     var faker = require('faker-br');
     let meuCpf = faker.br.cpf();
-    
-As funçoes básicas são do faker 4.1 (https://github.com/Marak/faker.js).  
-    
+
+As funçoes básicas são do faker 4.1 (https://github.com/Marak/faker.js).
+
 ### Browser
 
     <script src = "faker-br.js" type = "text/javascript"></script>
@@ -63,7 +61,7 @@ As funçoes básicas são do faker 4.1 (https://github.com/Marak/faker.js).
     var randomcpf = faker.br.cpf();
     var randomCnpj = faker.br.cnpj();
 
-    console.log(faker.br.cnpj()) ;    
+    console.log(faker.br.cnpj()) ;
 
 ## API
 
@@ -85,7 +83,7 @@ As funçoes básicas são do faker 4.1 (https://github.com/Marak/faker.js).
 	- format:boolean
 		retorna valor formatado
 
-### name 
+### name
 
 - adição de mais nomes para pt-br o que aumenta o numero de combinações, reduzindo repetiçoes.
 - adição de campos nao traduzidos para pt_BR marcados como "new", originalmente existentes em inglês.
@@ -112,7 +110,7 @@ name: gender prefix
 * br
   * cpf
   * cnpj
-  
+
 * address
   * zipCode
   * city
@@ -349,7 +347,7 @@ npm run-script doc
 #### Tamnil Saito Junior <tamnil@gmail.com>
 
 Faker-br - Copyright (c) 2018
-Tamnil Saito Junior 
+Tamnil Saito Junior
 
 http://github.com/tamnil/faker-br/
 
