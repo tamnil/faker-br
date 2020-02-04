@@ -1,4 +1,4 @@
-# Faker-br - Baseado no faker-br para desenvolvimento no Brasil
+# Faker-br - Baseado no "faker" para desenvolvimento no Brasil
 
 * Tamnil Saito Jr. < tamnil@gmail.com >
 
