@@ -18,9 +18,9 @@ const argv = process.argv
 
 const isFunction =  data => typeof data  === 'function';
 
-const removeFirstTwo = ([x,y,...z]) =>  z 
+const removeFirstTwo = ([x,y,...z]) =>  z
 
-const args = removeFirstTwo(argv) 
+const args = removeFirstTwo(argv)
 
 const first = ([x,...y]) => x
 
@@ -38,5 +38,9 @@ const evaluatedFaker = fakerCategoriesPath.reduce( generateFakerFunction ,fakerM
 
 const response = evaluatedFaker ? evaluatedFaker : 'undefined Faker-br function';
 
+if(typeof response === 'function'){
+console.log(response())
+}else{
 console.log(response)
+}
 
