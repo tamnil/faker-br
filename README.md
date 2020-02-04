@@ -1,5 +1,7 @@
 # Faker-br - Baseado no "faker" para desenvolvimento no Brasil
 
+[![Build Status](https://travis-ci.com/tamnil/faker-br.svg?branch=master)](https://travis-ci.com/tamnil/faker-br)
+
 * Tamnil Saito Jr. < tamnil@gmail.com >
 
 
