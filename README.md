@@ -8,12 +8,12 @@
 Fork baseado no Faker.js para implementação no Brasil em língua portuguesa. Este pacote mantém todas as definições de linguagem do Faker.js V 4.0.x. o idioma principal foi alterado de en para "pt_BR" , e fallback para "en". Portanto a língua nativa do faker-br se torna o português, com fallback para ingles que possui implementaçoes não disponiveis nas outras linguagens
     As funçoẽs nativas do faker foram mantidas.
 
-Instalacão:
+## Instalacão:
 ```
 npm install faker-br
 ```
 
-Fakerbr CLI
+## Fakerbr CLI
 para aplicaçoes em linha de comando:
 
 - sh/bash:
@@ -25,7 +25,7 @@ para aplicaçoes em linha de comando:
 ```
 
 
-incluisão da seguintes funções:
+## Inclusão da seguintes funções:
 
 - gerador de CPF
 - gerador de CNPJ
