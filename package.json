@@ -5,6 +5,17 @@
     "contributors": [
         "Tamnil Saito Junior <tamnil@gmail.com>"
     ],
+      "keywords": [
+    "faker",
+    "brasil",
+    "faker-br",
+    "tdd",
+    "dado",
+    "aleatorio",
+    "teste",
+    "jest",
+    "shell"
+  ],
     "repository": {
         "type": "git",
         "url": "http://github.com/tamnil/Faker-br.git"
