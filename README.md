@@ -11,7 +11,6 @@ Fork baseado no Faker.js para implementação no Brasil em língua portuguesa. E
 Instalacão:
 ```
 	npm install faker-br
-	
 ```
 
 Fakerbr CLI
