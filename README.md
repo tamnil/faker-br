@@ -13,7 +13,9 @@ Fakerbr CLI
 para aplicaçoes em linha de comando:
 
 - sh/bash:
+
 ```js
+    $ npm install -g faker-br
     $ echo meu cpf é `faker-br br.cpf`
     meu cpf é 65444122529
 ```
