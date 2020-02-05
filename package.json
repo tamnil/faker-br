@@ -1,21 +1,21 @@
 {
     "name": "faker-br",
     "description": "Brazilian Faker Data Generator - Gerador de dados para o Brasil. Fork do faker para pt_BR com extensão para CNPJ, CPF, RG, etc. ",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "contributors": [
         "Tamnil Saito Junior <tamnil@gmail.com>"
     ],
-      "keywords": [
-    "faker",
-    "brasil",
-    "faker-br",
-    "tdd",
-    "dado",
-    "aleatorio",
-    "teste",
-    "jest",
-    "shell"
-  ],
+    "keywords": [
+        "faker",
+        "brasil",
+        "faker-br",
+        "tdd",
+        "dado",
+        "aleatorio",
+        "teste",
+        "jest",
+        "shell"
+    ],
     "repository": {
         "type": "git",
         "url": "http://github.com/tamnil/Faker-br.git"
