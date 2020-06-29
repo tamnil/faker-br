@@ -27,8 +27,7 @@
         "doc": "jsdoc -c conf.json -t ./node_modules/ink-docstrap/template -R README.md lib",
         "coverage": "nyc report --reporter=text-lcov | coveralls",
         "test-br": "mocha ./test/br/*.*.js",
-        "watch-test-br": "npm-watch test-br",
-        "watch-test": "npm-watch test"
+        "watch-test-br": "npm-watch test-br"
     },
     "watch": {
         "test-br": {
