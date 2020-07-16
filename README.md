@@ -121,6 +121,9 @@ name: gender prefix
 
 * address
   * zipCode
+  * zipCodeByState
+  * zipCodeValid
+  * zipCodeValidByState
   * city
   * cityPrefix
   * citySuffix

@@ -508,5 +508,28 @@ describe("address.js", function () {
 
         });
     });
-
+    describe("zipCodeValid()", function () {
+        it("returns random zipCodeValid List", function () {
+            faker.locale = "pt_BR";
+            var zipCode = faker.address.zipCodeValid();
+            assert.ok(zipCode);
+        });
+    });
+    describe("zipCodeValidByState()", function () {
+        it("returns zipCodeValid  for specified State", function () {
+            faker.locale = "pt_BR";
+            var states = ["MG", "SP", "RS"];
+  
+            var zipCode1 = (faker.address.zipCodeValidByState(states[0]));
+            
+            assert.ok(zipCode1 >= 30000000);
+            assert.ok(zipCode1 <= 39999999);
+            var zipCode2 = (faker.address.zipCodeValidByState(states[1]));
+            assert.ok(zipCode2 >= 1000000);
+            assert.ok(zipCode2 <= 19999999);
+            var zipCode3 = (faker.address.zipCodeValidByState(states[2]));
+            assert.ok(zipCode3 >= 90000000);
+            assert.ok(zipCode3 <= 99999999);
+          });
+    });
 });
