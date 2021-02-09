@@ -12,31 +12,6 @@ const counter = x => Array(x).fill(undefined);
 const batchTest = x => counter(testSize).map(x);
 
 
-// warzone for development
-describe('warzone',() => {
-    describe('welcome to main warzone',()=>{
-
-        it('tests area',()=>{
-            console.log(faker.br.credit_card('VISA'))
-            console.log(faker.commerce.product())
-
-
-
-
-            console.log(
-                Object.getOwnPropertyNames(faker.br.credit_card),
-                faker.br.credit_card.a
-            )
-
-
-
-        })
-
-
-    })
-
-})
-
 describe('test cpf unit tests',() => {
 
 
