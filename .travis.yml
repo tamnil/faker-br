@@ -6,8 +6,6 @@ node_js:
   - "12"
   - "11"
   - "10"
-  - "9"
-  - "8"
 
 before_install:
   # Install meteor and spacejam, a meteor command line package tester
