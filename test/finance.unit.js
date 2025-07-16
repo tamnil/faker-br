@@ -342,4 +342,12 @@ describe('finance.js', function () {
             assert.ok(bic.match(expr));
         });
     });
+
+    describe("randomPixKey()", function () {
+        it("returns a random PIX key", function(){
+            var pixKey = faker.finance.randomPixKey();
+            assert.ok(pixKey.length === 36);
+            assert.ok(pixKey.match(/^([a-z\d]{8})\-([a-z\d]{4})\-([a-z\d]{4})\-([a-z\d]{4})\-([a-z\d]{12})$/));
+        });
+    });
 });
