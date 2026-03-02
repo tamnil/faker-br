@@ -92,5 +92,6 @@
         "faker-br": "cli.js"
     },
     "license": "MIT",
-    "main": "index.js"
+    "main": "index.js",
+    "types": "index.d.ts"
 }
